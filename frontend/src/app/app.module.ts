@@ -7,6 +7,7 @@ import { FormulaireComponent } from './formulaire/formulaire.component';
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { MapComponent } from './map/map.component';
+import { SystemeComponent } from './systeme/systeme.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MapComponent } from './map/map.component';
     FormulaireComponent,
     DashbordComponent,
     HistoriqueComponent,
-    MapComponent
+    MapComponent,
+    SystemeComponent
   ],
   imports: [
     BrowserModule,
