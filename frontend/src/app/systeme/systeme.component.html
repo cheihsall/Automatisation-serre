@@ -13,42 +13,47 @@
             <div class="card" style="width: 18rem;">
                 <h5 class="card-title text-center " >Arrosage</h5>
                 <img src="/assets/tomate.jpg" class="card-img-top" alt="image">
-                <div class="card-body">
+                <div class="card-body d-flex  justify-content-center gap-5">
                   
                  
-                  <a href="#" class="btn btn-success ">Arroser</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="#" class="btn btn-success ">Arroser</a> 
                   <a href="#" class="btn btn-danger">Arreter</a>
                 </div>
               </div>
         </div>
-
+<!-- partie extracteur fenetre -->
         <div class="col-lg-4">
             <div class="card" style="width: 18rem;">
                 <h5 class="card-title text-center " >Toit</h5>
-                <img src="/assets/ouvert.png" class="card-img-top" alt="image">
-                <div class="card-body">
+                <img src="{{imgOuvert}}" class="card-img-top" alt="image">
+                <div class="card-body d-flex  justify-content-center gap-5">
                   
-                    <img  *ngIf="bouton == ouvert" src="assets/extracteur.gif"  >
-                    <img  *ngIf="bouton == fermer" src="assets/extract.png"  >   
-                 
-                  <a href="#" class="btn btn-success ">Ouvert</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="#" class="btn btn-danger">Fermer</a>
+                     
+                  <button *ngFor="let imageButtonf of imageOuvert ; "  (click)="cliquer(imageButtonf);" class="btn btn-success  rounded-pill"> Ouvert  
+                  </button>
+                  <button *ngFor="let imageButtonf of imageFermer ;" (click)="cliquer(imageButtonf);" class="btn btn-danger rounded-pill "> Fermer 
+                 </button>
                 </div>
               </div>
         </div>
+        <!-- partie extracteur d'aire -->
         <div class="col-lg-4">
             <div class="card" style="width: 18rem;">
                 <h5 class="card-title text-center " >Extracteur</h5>
-                <img src="/assets/extract.png" class="card-img-top" style="height: 185px;" alt="image">
-                <div class="card-body">
-                  
+                <img src="{{imageSrc }}" class="card-img-top" style="height: 190px;" alt="image">
+                <div class="card-body d-flex  justify-content-center gap-5">
                  
-                  <a href="#" class="btn btn-success ">Allumer</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <a href="#" class="btn btn-danger">Eteindre</a>
+                   <button *ngFor="let imageButton of imageButtonOn; "  (click)="onClick(imageButton);" class="btn btn-success  rounded-pill"> Allumer  
+                     </button>
+                     <button *ngFor="let imageButton of imageButtons;" (click)="onClick(imageButton);" class="btn btn-danger rounded-pill "> Eteindre  
+                    </button>
+                 
                 </div>
               </div>
         </div>
     </div>
     </div>
+
+    
 </body>
 </html>

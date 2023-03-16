@@ -6,10 +6,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./systeme.component.scss']
 })
 export class SystemeComponent implements OnInit {
-  bouton:any
-  ouvert='assets/ouvert.png'
-  fermer='assets/fermer.png'
+  imgOuvert='assets/ouvert.png'
+  imageSrc = 'assets/extract.png';
+  imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
+  imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
+
+  imageFermer = [ {src:'assets/fermer.png', srcs:'', srcr :''}];
+  imageOuvert = [ {src:'assets/ouvert.png',  srcr:'', srcs : ''}];
+
+  
   ngOnInit(): void {
       
+  }
+  onClick(imageNameObject: { srcr: string; srcs: string; src: string;}) {
+    this.imageSrc = imageNameObject.src;
+    
+   /*  this.onSrc = imageNameObject.srcs ;
+    this.offSrc = imageNameObject.srcr ;
+     */
+  }
+  cliquer(imageNameObject: { srcr: string; srcs: string; src: string;}) {
+   
+    this.imgOuvert = imageNameObject.src;
+   /*  this.onSrc = imageNameObject.srcs ;
+    this.offSrc = imageNameObject.srcr ;
+     */
   }
 }
