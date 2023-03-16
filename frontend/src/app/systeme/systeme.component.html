@@ -1,1 +1,54 @@
-<p>systeme works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page-systeme</title>
+</head>
+<body >
+    <div class="container mt-5">
+        <div class="row">
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title text-center " >Arrosage</h5>
+                <img src="/assets/tomate.jpg" class="card-img-top" alt="image">
+                <div class="card-body">
+                  
+                 
+                  <a href="#" class="btn btn-success ">Arroser</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="#" class="btn btn-danger">Arreter</a>
+                </div>
+              </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title text-center " >Toit</h5>
+                <img src="/assets/ouvert.png" class="card-img-top" alt="image">
+                <div class="card-body">
+                  
+                    <img  *ngIf="bouton == ouvert" src="assets/extracteur.gif"  >
+                    <img  *ngIf="bouton == fermer" src="assets/extract.png"  >   
+                 
+                  <a href="#" class="btn btn-success ">Ouvert</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="#" class="btn btn-danger">Fermer</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-title text-center " >Extracteur</h5>
+                <img src="/assets/extract.png" class="card-img-top" style="height: 185px;" alt="image">
+                <div class="card-body">
+                  
+                 
+                  <a href="#" class="btn btn-success ">Allumer</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="#" class="btn btn-danger">Eteindre</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
