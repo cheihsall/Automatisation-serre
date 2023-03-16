@@ -7,7 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SystemeComponent implements OnInit {
   imgOuvert='assets/ouvert.png'
+  imgFermer='assets/fermer.png'
   imageSrc = 'assets/extract.png';
+  imgtomate ='assets/tomate.jpg'
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
   imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
 
@@ -27,7 +29,7 @@ export class SystemeComponent implements OnInit {
   }
   cliquer(imageNameObject: { srcr: string; srcs: string; src: string;}) {
    
-    this.imgOuvert = imageNameObject.src;
+    this.imgFermer = imageNameObject.src;
    /*  this.onSrc = imageNameObject.srcs ;
     this.offSrc = imageNameObject.srcr ;
      */
