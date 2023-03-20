@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SystemeComponent implements OnInit {
   imgOuvert='assets/ouvert.png'
-  imgFermer='assets/fermer.png'
+  imgFermer='assets/fermerr.jpg'
   imageSrc = 'assets/extract.png';
   imgtomate ='assets/tomate.jpg';
   imgOignon ='assets/oignon.png';
@@ -16,8 +16,8 @@ export class SystemeComponent implements OnInit {
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
   imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
 
-  imageFermer = [ {src:'assets/fermer.png', srcs:'', srcr :''}];
-  imageOuvert = [ {src:'assets/ouvert.png',  srcr:'', srcs : ''}];
+  imageFermer = [ {src:'assets/fermerr.jpg', srcs:'', srcr :''}];
+  imageOuvert = [ {src:'assets/openserre.webp',  srcr:'', srcs : ''}];
 
   imageArroser = [ {src:'assets/pompe.gif', srcs:'', srcr :''}];
   imageArreter = [ {src:'assets/pompe.jpeg',  srcr:'', srcs : ''}];
