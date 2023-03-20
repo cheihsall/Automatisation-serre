@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy  } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 //import { UserService } from '../user.service';
+//import "~bootstrap-icons/font/bootstrap-icons.css";
 
 @Component({
   selector: 'app-formulaire',
@@ -28,7 +29,7 @@ throw new Error('Method not implemented.');
   constructor(/*private RealtimeService: RealtimeService,*/
     public formBuilder: FormBuilder  ) {
     this.registerForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.email, /*Validators.pattern()*/]],
       password: ['', [Validators.required]],
     });
   }

@@ -8,6 +8,7 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { MapComponent } from './map/map.component';
 import { SystemeComponent } from './systeme/systeme.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { SystemeComponent } from './systeme/systeme.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

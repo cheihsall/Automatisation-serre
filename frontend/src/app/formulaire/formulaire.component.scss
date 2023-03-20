@@ -7,6 +7,9 @@
   border-bottom-left-radius:  7px ;
 }
 
+.bordure{
+  border: none;
+}
 .boutton{
   background-color: #3A3A3A;
   color: #91D333;
@@ -76,6 +79,10 @@
   justify-items: center;
 
 }
+.ok{
+  box-shadow: 5px 5px 5px black;
+  background-color: #91D333;
+}
 /* .groupe{
 
 
@@ -105,7 +112,7 @@ margin-top: 20%;
   background-color: #91D333;
 }
 .form-control{
-  background-color: #f8f9fe;
+  background-color:none;
 }
 
 .separator-bottom{

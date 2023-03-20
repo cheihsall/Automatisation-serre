@@ -3,7 +3,7 @@
 
   <div class=" titre text-center">
       <h1 class="text-white">Gestion de Serre automatisé </h1><br>
-      
+
   </div>
 <div class="general">
 <div class="V">
@@ -40,17 +40,17 @@
               <h1>CONNEXION</h1>
             </div>
 
-            <form role="form" class="format">
+            <form role="form" class="format"  [formGroup]="registerForm">
               <label for="email">Email</label>
-              <div class="form-group mb-3 bg-light">
+              <div class="form-group mb-3 ">
 
                 <div class="input-group">
 
 
                   <div class="input-group-prepend "
-                    [ngClass]="{'invalid': submitted &&registerForm.controls['email'].errors}" type="email">
+                    [ngClass]="{'invalid':registerForm.controls['email'].dirty && registerForm.controls['email'].errors}" type="email">
 
-                    <span class="input-group-text bg-light bd"><svg width="14" height="25" viewBox="0 0 13 14"
+                    <span class="input-group-text bd"><svg width="14" height="25" viewBox="0 0 13 14"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M12.7537 4.62292C12.8527 4.5099 13 4.61562 13 4.79427V12.25C13 13.2161 12.4541 14 11.7812 14H1.21875C0.545898 14 0 13.2161 0 12.25V4.79792C0 4.61562 0.144727 4.51354 0.246289 4.62656C0.815039 5.26094 1.56914 6.06667 4.15898 8.76823C4.69473 9.32969 5.59863 10.5109 6.5 10.5036C7.40645 10.5146 8.32812 9.30781 8.84355 8.76823C11.4334 6.06667 12.185 5.25729 12.7537 4.62292ZM6.5 9.33333C7.08906 9.34792 7.93711 8.26875 8.36367 7.82396C11.733 4.31302 11.9895 4.00677 12.7664 3.13177C12.9137 2.96771 13 2.7125 13 2.44271V1.75C13 0.783854 12.4541 0 11.7812 0H1.21875C0.545898 0 0 0.783854 0 1.75V2.44271C0 2.7125 0.0863281 2.96406 0.233594 3.13177C1.01055 4.00312 1.26699 4.31302 4.63633 7.82396C5.06289 8.26875 5.91094 9.34792 6.5 9.33333Z"
@@ -61,13 +61,13 @@
 
 
                   <input class="form-control db" formControlName="email"
-                    [ngClass]="{'is-invalid':submitted && registerForm.controls['email'].errors}" type="email">
+                    [ngClass]="{'is-invalid':registerForm.controls['email'].dirty && registerForm.controls['email'].errors}" type="email">
                 </div>
-                <div *ngIf="submitted && registerForm.controls['email'].errors" class="text-danger">
-                  <div *ngIf="submitted && registerForm.controls['email'].errors['required']">
+                <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors" class="text-danger">
+                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['required']">
                     L' email est requis
                   </div>
-                  <div *ngIf="submitted && registerForm.controls['email'].errors['email']">
+                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['email']">
                     L'email n'est pas valide
                   </div>
                 </div>
@@ -76,7 +76,7 @@
               <div class="form-group">
                 <div class="input-group input-group-alternative">
                   <div class="input-group-prepend  " style=" border-left-width: none;"
-                    [ngClass]="{'invalid':submitted &&registerForm.controls['password'].errors}" type="email">
+                    [ngClass]="{'invalid': registerForm.controls['email'].dirty && registerForm.controls['password'].errors}" type="email">
                     <span class=" bd "><svg width="13" height="25" viewBox="0 0 13 14" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -86,14 +86,14 @@
                     </span>
                   </div>
                   <input class="form-control db" formControlName="password"
-                    [ngClass]="{'is-invalid':submitted && registerForm.controls['password'].errors}" type="password">
+                    [ngClass]="{'is-invalid':registerForm.controls['email'].dirty &&registerForm.controls['password'].errors}" type="password">
 
                 </div>
-                <div *ngIf="submitted && registerForm.controls['password'].errors" class="text-danger">
-                  <div *ngIf="submitted && registerForm.controls['password'].errors['required']">
+                <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['password'].errors" class="text-danger">
+                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['password'].errors['required']">
                     Le mot de passe est requis
                   </div>
-                  <div *ngIf="submitted && registerForm.controls['password'].errors['minlength']">
+                  <div *ngIf="registerForm.controls['email'].dirty &&registerForm.controls['password'].errors['minlength']">
                     Le mot de passe doit contenir 5 caractères
                   </div>
                 </div>
@@ -111,4 +111,47 @@
   </div>
 </div>
 </div>
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog " role="document">
+    <div class="modal-content ok">
+      <div class="modal-header text-center bordure">
+        <h4 class="modal-title w-100 font-weight-bold">Modification de mot de passe</h4>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Actuel mot de passe</label>
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass"  class="form-control validate">
+
+        </div>
+        <div class="md-form mb-5">
+             <label data-error="wrong" data-success="right" for="orangeForm-pass">Nouveau mot de passe</label>
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass"  class="form-control validate">
+
+        </div>
+
+        <div class="md-form mb-4">
+            <label data-error="wrong" data-success="right" for="orangeForm-pass">Confirmation de mot de passe</label>
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="orangeForm-pass" class="form-control validate">
+
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center bordure">
+        <button type="submit" class="btn boutton my-4 font-weight-bold">Modifier</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <button  class="btn btn-default btn-rounded mb-4" data-bs-toggle="modal" data-bs-target="#modalRegisterForm">modification password</button>
+</div>
+
 </div>
