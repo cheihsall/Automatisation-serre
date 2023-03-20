@@ -10,7 +10,7 @@ import { MapComponent } from './map/map.component';
 import { SystemeComponent } from './systeme/systeme.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+
 import {NgxPaginationModule} from 'ngx-pagination';
 import { IgxCalendarModule } from 'igniteui-angular'
 
