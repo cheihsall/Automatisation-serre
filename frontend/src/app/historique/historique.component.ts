@@ -18,7 +18,7 @@ export class HistoriqueComponent implements OnInit{
   totalLenght: any;
   page : number=1;
   updateForm!: FormGroup;
-filterTerm!: string;
+  filterTerm!: string;
 
   ngOnInit(){
    this.filter_entree=donnee;
@@ -27,6 +27,14 @@ filterTerm!: string;
 
 
   }
+//recherche par calendrier
+  calend(e:any)
+    {
+      console.log(e.target.value)
+      this.filter_entree = this.filter_entree.filter((el:any)=>{
+return el.Date.toLowerCase().includes(e.target.value.toLowerCase())
+      })
+    }
 
 }
 
