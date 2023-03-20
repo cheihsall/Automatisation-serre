@@ -12,7 +12,6 @@ import { SystemeComponent } from './systeme/systeme.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {NgxPaginationModule} from 'ngx-pagination';
-import { IgxCalendarModule } from 'igniteui-angular'
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
