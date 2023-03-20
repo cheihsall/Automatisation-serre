@@ -13,22 +13,16 @@
         </defs>
         </svg>
 
-      </div>  
+      </div>
 
    <h2 style="color: #91D333; margin-top: 12%; text-align: center;">Nom et Prenom</h2>
 
-   <button type="button" class="btn  col-md-8" style="margin-left: 15%; background-color: #91D333; margin-top: 15%;" data-bs-toggle="button"><img src="./assets/kkk-removebg-preview.png" alt="" style="width: 30px; height: 30px;" srcset=""> Dashbord</button>
-   <button type="button" class="btn btn-light col-md-8" style="margin-left: 15%; margin-top: 15%;" data-bs-toggle="button"><img src="./assets/mmma-removebg-preview.png" style="width: 30px; height: 30px;" alt="" srcset="">  Historique</button>
-   <button type="button" class="btn btn-light col-md-8" style="margin-left: 15%; margin-top: 15%;" data-bs-toggle="button"> <img src="./assets/profilmodif-removebg-preview.png" style="width: 30px; height: 30px;" alt="" srcset="">
-      Modifier accés</button>
-   <button type="button" class="btn btn-light col-md-8" style="margin-left: 15%; margin-top: 15%;" data-bs-toggle="button">  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M6.94555 0.0549772L0.448962 3.05338C-0.300572 3.40322 -0.0507268 4.50258 0.748807 4.50258H3.49741V7.25114C3.49741 8.05066 4.59679 8.30066 4.94663 7.55098L7.94508 1.0545C8.19493 0.45466 7.54524 -0.19502 6.94555 0.0549772Z" fill="black"/>
-    </svg> Géolocalisation</button>
-<!--
-      <a class="dropdown-item e">
-      <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48" class="j" fill="#f5365c"><path d="M6 42V6h36v36Zm3-25h30V9H9Zm11 11h8v-8h-8Zm0 11h8v-8h-8ZM9 28h8v-8H9Zm22 0h8v-8h-8ZM9 39h8v-8H9Zm22 0h8v-8h-8Z"/></svg>
-      <span style="color: aliceblue;">Dashbord</span>
-    </a>   -->
+   <button type="button" class="btn  col-md-8" style="margin-left: 15%; background-color: #91D333; margin-top: 15%;" data-bs-toggle="button"><img src="./assets/kkk-removebg-preview.png" alt="" style="width: 30px; height: 30px; margin-bottom: 9px;" srcset=""> <span style="font-size: 24px; "> Dashbord</span></button>
+   <button type="button" class="btn btn-light col-md-8" style="margin-left: 15%; margin-top: 15%;" data-bs-toggle="button"><img src="./assets/mmma-removebg-preview.png" style="width: 30px; height: 30px; margin-bottom: 9px;" alt="" srcset=""> <span style="font-size: 24px; ">Historique</span> </button>
+   <button type="button" class="btn btn-light col-md-8" style="margin-left: 15%; margin-top: 15%;" data-bs-toggle="modal" data-bs-target="#modalRegisterForm"> <img src="./assets/profilmodif-removebg-preview.png" style="width: 30px; height: 30px; margin-bottom: 9px;" alt="" srcset="">
+    <span style="font-size: 24px; ">Profil</span></button>
+   <button type="button" class="btn btn-light col-md-8" style="margin-left: 15%; margin-top: 15%;" data-bs-toggle="button"><img src=" ./assets/localisation-removebg-preview.png" alt="" style="width: 20px; height: 20px; margin-bottom: 9px;" srcset=""> <span style="font-size: 24px; ">localisation</span> </button>
+
 
     </div>
 <!-- /SIDEBAR -->
@@ -38,7 +32,7 @@
   <section class="w100 fixed-top" >
     <div style="margin-left: 13.8%;">
       <nav class="navbar"  >
-    
+
 
         <div style="margin-left: 40%;" >
   <h1 style=" color: aliceblue; text-align: center;">TABLEAU DE BORD</h1>
@@ -53,14 +47,18 @@
 
 
 
-  <section class="" style="margin-left: 13.8%; background-color: red; height: 274px;" > 
-  
+
+  <section class="" style="margin-left: 13.8%;  height: 274px;" > 
+
     <div class="" style="  border: 1px solid; border-color: #91D333;" >
 
        <div class="justify-content-center d-flex gap-4 w-100 mt-3 mb-3 " style=" height: 15rem;">
            <div class="card " style="width: 18rem; background-color: #91D333;">
                <div class=" d-flex flex-column gap-4 "  >
                <div class="card-title w-100 bg-secondary p-2 rounded-1 d-flex justify-content-center">
+               
+                  <img src="./assets/temperature-removebg-preview.png" alt="" style="width: 20px; height: 25px;" srcset="">
+                    
 
                   <img src="./assets/svgviewer-png-output (1).png" alt="" srcset="">
 
@@ -76,7 +74,7 @@
                <div class=" d-flex flex-column gap-4" >
                <div class="card-title w-100 bg-secondary p-2 rounded-1 d-flex justify-content-center">
 
-                  <img src="./assets/humidity-removebg-preview.png" style="width: 50px; height: 25px; top: 12px;" alt="" srcset="">  
+                  <img src="./assets/humidity-removebg-preview.png" style="width: 50px; height: 25px; top: 12px;" alt="" srcset="">
 
                        <span style="color: #91D333;">HUMIDITÉ</span>
 
@@ -117,8 +115,10 @@
 
        </div>
 
+
    </div> 
-  <div class="d-flex justify-content-center  " style="background-color: greenyellow; width: 100%;height: 20%;">
+  <div class="d-flex justify-content-center  " style="background-color: white; width: 100%;height: 90rem;">
+
 
    <router-outlet></router-outlet>
 
@@ -131,4 +131,50 @@
 
 
   </section>
+
+
+
+  <!-- partie popup-->
+
+
+<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+aria-hidden="true">
+<div class="modal-dialog " role="document">
+  <div class="modal-content ok">
+    <div class="modal-header text-center bordure">
+      <h4 class="modal-title w-100 font-weight-bold">Modification de mot de passe</h4>
+      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body mx-3">
+      <div class="md-form mb-5">
+        <label data-error="wrong" data-success="right" for="orangeForm-pass">Actuel mot de passe</label>
+        <i class="fas fa-user prefix grey-text"></i>
+        <input type="password" id="orangeForm-pass"  class="form-control validate">
+
+      </div>
+      <div class="md-form mb-5">
+           <label data-error="wrong" data-success="right" for="orangeForm-pass">Nouveau mot de passe</label>
+        <i class="fas fa-envelope prefix grey-text"></i>
+        <input type="password" id="orangeForm-pass"  class="form-control validate">
+
+      </div>
+
+      <div class="md-form mb-4">
+          <label data-error="wrong" data-success="right" for="orangeForm-pass">Confirmation de mot de passe</label>
+        <i class="fas fa-lock prefix grey-text"></i>
+        <input type="password" id="orangeForm-pass" class="form-control validate">
+
+      </div>
+
+    </div>
+    <div class="modal-footer d-flex justify-content-center bordure">
+      <button type="submit" class="btn boutton my-4 font-weight-bold">Modifier</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
 
