@@ -10,6 +10,7 @@ export class SystemeComponent implements OnInit {
   imgFermer='assets/fermer.png'
   imageSrc = 'assets/extract.png';
   imgtomate ='assets/tomate.jpg';
+  imgOignon ='assets/oignon.png';
   imgpompe ='assets/pompe.png'
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
   imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
