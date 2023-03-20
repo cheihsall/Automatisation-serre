@@ -8,10 +8,14 @@ import { DashbordComponent } from './dashbord/dashbord.component';
 import { HistoriqueComponent } from './historique/historique.component';
 import { MapComponent } from './map/map.component';
 import { SystemeComponent } from './systeme/systeme.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { IgxCalendarModule } from 'igniteui-angular'
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -27,9 +31,10 @@ import { IgxCalendarModule } from 'igniteui-angular'
   imports: [
     BrowserModule,
     AppRoutingModule,
+   ReactiveFormsModule,
     FormsModule,
-    NgxPaginationModule,
-    
+    NgxPaginationModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
