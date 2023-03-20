@@ -11,12 +11,21 @@ export class SystemeComponent implements OnInit {
   imageSrc = 'assets/extract.png';
   imgtomate ='assets/tomate.jpg';
   imgOignon ='assets/oignon.png';
-  imgpompe ='assets/pompe.png'
+  imgpompe ='assets/pompe.jpeg';
+  imgpompegif ='assets/pompe.gif';
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
   imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
 
   imageFermer = [ {src:'assets/fermer.png', srcs:'', srcr :''}];
   imageOuvert = [ {src:'assets/ouvert.png',  srcr:'', srcs : ''}];
+
+  imageArroser = [ {src:'assets/pompe.gif', srcs:'', srcr :''}];
+  imageArreter = [ {src:'assets/pompe.jpeg',  srcr:'', srcs : ''}];
+
+  imageArroT = [ {src:'assets/pompe.gif', srcs:'', srcr :''}];
+  imagetomate = [ {src:'assets/tomate.jpg',  srcr:'', srcs : ''}];
+
+
 
   
   ngOnInit(): void {
@@ -35,5 +44,13 @@ export class SystemeComponent implements OnInit {
    /*  this.onSrc = imageNameObject.srcs ;
     this.offSrc = imageNameObject.srcr ;
      */
+  }
+  arrose(imageNameObject: { srcr: string; srcs: string; src: string;}) {
+    this.imgpompe = imageNameObject.src;
+
+  }
+  arroseT(imageNameObject: { srcr: string; srcs: string; src: string;}) {
+    this. imgtomate= imageNameObject.src;
+
   }
 }
