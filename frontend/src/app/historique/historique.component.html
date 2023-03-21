@@ -1,11 +1,12 @@
  <div>
  <div class="blc3" style="border-radius: 5px;color: #000000;width: 98%; margin-left: 1.1%;padding-top: 1%;justify-content: center;">
 
-        <nav class="navbar navbar-light bg-$gray-900">
+        <nav class="navbar navbar-light bg-$gray-900" >
           <div class="container-fluid" >
 
-           <h1 >Historiques</h1>
-            <form class="d-flex">
+                   <h1 > Historiques</h1>
+            <form class="d-flex ">
+
               <input  (change)="calend($event)" class="form-control me-2"  type="date" id="cal" name="calendrier">
               <!--  -->
             </form>
@@ -28,7 +29,7 @@
               </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let periode of filter_entree">
+            <tr *ngFor="let periode of filter_entree | paginate : config">
               <td align="center">{{periode.Date}}</td >
               <td align="center">{{periode.Temperature}}</td >
               <td align="center">{{periode.Humidite}} </td >
@@ -39,7 +40,8 @@
           </tbody>
           </table>
           <div class="pagination justify-content-center">
-            <pagination-controls (pageChange)="page=$event"></pagination-controls>
+           <!--  <pagination-controls (pageChange)="page=$event"></pagination-controls> -->
+           
           </div>
 
           </div>
@@ -54,6 +56,17 @@
   }
   h1{color:white;
   }
+
+
+  h1
+{
+  font-size: 32px;
+  text-shadow: -1px -1px #0c0, 1px 1px #060, -3px 0 4px #000;
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(10, 214, 10);
+  padding:16px;
+  text-align:center;
+}
   </style>
 
 

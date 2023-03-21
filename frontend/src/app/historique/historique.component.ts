@@ -8,6 +8,8 @@ import { FormGroup} from "@angular/forms";
   templateUrl: './historique.component.html',
   styleUrls: ['./historique.component.scss']
 })
+
+
 export class HistoriqueComponent implements OnInit{
   temperature: any;
   humidite: any;
@@ -15,8 +17,10 @@ export class HistoriqueComponent implements OnInit{
   humsol: any;
   Date=new Date();
   filter_entree!: any;
-  totalLenght: any;
-  page : number=1;
+  /* totalLenght: any;
+  page : number=1; */
+  config: any; // pagination
+  collection = { count: 60, data: [] }; // pagination
   updateForm!: FormGroup;
   filterTerm!: string;
 
@@ -24,9 +28,11 @@ export class HistoriqueComponent implements OnInit{
    this.filter_entree=donnee;
     console.log(this.filter_entree)
 
-
-
   }
+// pagination
+
+
+
 //recherche par calendrier
   calend(e:any)
     {
