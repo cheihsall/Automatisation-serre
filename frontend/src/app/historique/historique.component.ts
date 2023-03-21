@@ -17,8 +17,8 @@ export class HistoriqueComponent implements OnInit{
   humsol: any;
   Date=new Date();
   filter_entree!: any;
-  /* totalLenght: any;
-  page : number=1; */
+  totalLenght: any;
+  page : number=1;
   config: any; // pagination
   collection = { count: 60, data: [] }; // pagination
   updateForm!: FormGroup;

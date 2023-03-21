@@ -2,7 +2,7 @@
  <div class="blc3" style="border-radius: 5px;color: #000000;width: 98%; margin-left: 1.1%;padding-top: 1%;justify-content: center;">
 
         <nav class="navbar navbar-light bg-$gray-900" >
-          <div class="container-fluid" >
+          <div class="container-fluid" style="height: 54px;">
 
                    <h1 > Historiques</h1>
             <form class="d-flex ">
@@ -19,7 +19,7 @@
           </div>
           <thead>
 
-              <tr align="center" style="background-color: #91D333; color: white;">
+              <tr align="center" style="background-color: #91D333; color: white; ">
 
                 <th>Date</th>
                 <th>Température en °C</th>
@@ -29,7 +29,7 @@
               </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let periode of filter_entree | paginate : config">
+            <tr *ngFor="let periode of filter_entree">
               <td align="center">{{periode.Date}}</td >
               <td align="center">{{periode.Temperature}}</td >
               <td align="center">{{periode.Humidite}} </td >
@@ -41,7 +41,7 @@
           </table>
           <div class="pagination justify-content-center">
            <!--  <pagination-controls (pageChange)="page=$event"></pagination-controls> -->
-           
+
           </div>
 
           </div>
