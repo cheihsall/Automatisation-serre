@@ -37,7 +37,15 @@
                         <div *ngIf="imgtomate"><div class=" card-body d-flex  justify-content-center gap-5"><button *ngFor="let pomper of imageArroT; " (click)="arroseT(pomper);" class="btn btn-success  rounded"> Arroser
                         </button> 
                         <button  *ngFor="let pomper of imagetomate ; "  (click)="arroseT(pomper);"  class="btn btn-danger rounded ">Arreter 
-                       </button></div> </div>
+                       </button></div>
+                       <div class="content">
+                        <div class="text"><h5>Nom:Tomate</h5>
+                          <h5>Caractéristiques:Riche en eau;<br>
+                            Source de vitamine C ;</h5>
+                          <h5>Nombre d'arrosage:2/jr</h5>
+                        </div>
+                      </div>
+                       </div>
                       </div>
 
 
@@ -49,6 +57,13 @@
                         </button> 
                         <button  *ngFor="let pomperr of imageArreterO ; "  (click)="arroseO(pomperr);"  class="btn btn-danger rounded ">Arreter 
                        </button></div> </div>
+                       <div class="content">
+                        <div class="text"><h5>Nom:Oignon</h5>
+                          <h5>Caractéristiques:Favorise la santé cardiovasculaire<br>
+                            Peu calorique ;</h5>
+                          <h5>Nombre d'arrosage:1/jr</h5>
+                        </div>
+                      </div>
                       </div>
                     </div>
                     <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
