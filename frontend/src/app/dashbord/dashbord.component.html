@@ -17,7 +17,7 @@
 
    <h2 style="color: #91D333; margin-top: 12%; text-align: center;">Nom et Prenom</h2>
    <button type="button" class="btn e card-title rounded-1 btn-light col-md-10" style="margin-left: 7.5%;  margin-top: 34%;" data-bs-toggle="button"><a routerLinkActive="active" [routerLink]="['systeme']"  class="dropdown-item e"><img src="./assets/mmma-removebg-preview.png" style="width: 30px; height: 30px; margin-bottom: 9px;" alt="" srcset=""> <span style="font-size: 20px; ">Dashboard</span></a> </button>
-  
+
    <button type="button" class="btn e card-title rounded-1 btn-light col-md-10" style="margin-left: 7.5%;  margin-top: 15%;" data-bs-toggle="button"><a routerLinkActive="active" [routerLink]="['historique']" class="dropdown-item e"><img src="./assets/mmma-removebg-preview.png" style="width: 30px; height: 30px; margin-bottom: 9px;" alt="" srcset=""> <span style="font-size: 20px; ">Historique</span></a> </button>
    <button type="button" class="btn e card-title rounded-1 btn-light col-md-10" style="margin-left: 7.5%; margin-top: 15%;" data-bs-toggle="modal" data-bs-target="#modalRegisterForm"> <img src="./assets/profilmodif-removebg-preview.png" style="width: 30px; height: 30px; margin-bottom: 9px;" alt="" srcset="">
     <span style="font-size: 20px;">Modifier Profil</span></button>
@@ -48,21 +48,21 @@
 
 
 
-  <section class="w-100" style="margin-left: 13.8%;  height: 274px; " > 
+  <section class="w-100" style="margin-left: 13.8%;  height: 274px; " >
 
     <div class="" style="  border: 1px solid; border-color: #91D333; height: 16rem;" *ngFor="let periode of filter_entree">
 
        <div class=" d-flex gap-4  mb-3 "  style=" height: 15rem; margin-left: 13.8rem; margin-top: 2rem;">
-           <div class="card " style="width: 16rem;  height: 12rem;  background-color: #91D333;">
+           <div class="card rounded-4" style="width: 16rem;  height: 13rem;  background-color: #91D333;">
                <div class=" d-flex flex-column gap-4 "  >
-               <div  class="card-title  colorr p-2 rounded-1 d-flex justify-content-center">
-               
-                  <img src="./assets/temperature-removebg-preview.png" alt="" style="width: 20px; height: 25px;" srcset="">
-                    
+               <div  class="card-title  colorr p-2 rounded-4 d-flex justify-content-center">
 
-                  <img src="./assets/svgviewer-png-output (1).png" alt="" srcset="">
+                  <img src="./assets/temperature-removebg-preview.png" alt="" style="width: 30px; height: 35px;" srcset="">
 
-                       <span style="color: #91D333;">TEMPÉRATURE</span>
+
+
+
+                       <span style="color: #91D333; font-size: 30px;">Temperature</span>
 
                </div>
                <div class="d-flex justify-content-center gap-2" style="margin-top: 5px;">
@@ -111,7 +111,7 @@
        </div>
 
 
-   </div> 
+   </div>
   <div class="" style=" margin-top: 2rem;  width: 100%; height: 90rem;">
   <router-outlet></router-outlet>
 </div>
