@@ -29,7 +29,7 @@
               </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let periode of filter_entree">
+            <tr *ngFor="let periode of filter_entree | paginate: {itemsPerPage:3, currentPage:page, totalItems:totalLenght };">
               <td align="center">{{periode.Date}}</td >
               <td align="center">{{periode.Temperature}}</td >
               <td align="center">{{periode.Humidite}} </td >
@@ -39,13 +39,18 @@
             </tr>
           </tbody>
           </table>
-          <div class="pagination justify-content-center">
-            <pagination-controls (pageChange)="page=$event"></pagination-controls>
+  <!-- pagination -->
+  <div class="pagination  justify-content-center">
+    <pagination-controls (pageChange)="page=$event" ></pagination-controls>
+    </div>
 
-          </div>
+
+
+
 
           </div>
     </div>
+
 
 
 <style>
@@ -56,7 +61,6 @@
   }
   h1{color:white;
   }
-
 
   h1
 {

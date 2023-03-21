@@ -17,19 +17,18 @@ export class HistoriqueComponent implements OnInit{
   humsol: any;
   Date=new Date();
   filter_entree!: any;
-  totalLenght: any;
-  page : number=1;
-  config: any; // pagination
-  collection = { count: 60, data: [] }; // pagination
+  totalLenght: any; // pagination
+  page : number=1; // pagination
   updateForm!: FormGroup;
-  filterTerm!: string;
+  filterTerm!: string;// pagination
+
 
   ngOnInit(){
    this.filter_entree=donnee;
     console.log(this.filter_entree)
 
   }
-// pagination
+
 
 
 
