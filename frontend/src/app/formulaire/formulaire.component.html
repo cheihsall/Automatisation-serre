@@ -60,7 +60,7 @@
                   <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['required']">
                     L' email est requis
                   </div>
-                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['email']">
+                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['email'] && registerForm.controls['email'].errors['pattern']">
                     L'email n'est pas valide
                   </div>
                 </div>
