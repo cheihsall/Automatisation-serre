@@ -10,19 +10,16 @@ import { donnee } from './../test2';
   styleUrls: ['./dashbord.component.scss']
 })
 
-export class DashbordComponent implements OnInit {
- this.filter_entree=donnee;
-     console.log(this.filter_entree)
+export class DashbordComponent  {
+
   profileForm!:FormGroup
  temperature: any;
   humidite: any;
   lumiere: any;
   humsol: any;
-  
-   this.filter_entree=donnee;
-     console.log(this.filter_entree)
-  filter_entree!: any;
-  
+
+
+
   submitted=false;
   invalid = false;
   //champs ancien mot de passe
@@ -40,6 +37,7 @@ export class DashbordComponent implements OnInit {
 
 
     pass: string = '';
+  filter_entree:any;
     constructor(
 
        public formBuilder: FormBuilder ) {
@@ -53,10 +51,11 @@ export class DashbordComponent implements OnInit {
     )
     }
 
-    ngOnInit(): void {
-      // TODO document why this method 'ngOnInit' is empty
+    ngOnInit(): void {this.filter_entree=donnee;
+      console.log(this.filter_entree)
 
-    }
+   }
+
 
     passeIdentique(){
       if ( (this.profileForm.value.newPass != this.profileForm.value.newPasswordconfirm ) || (this.profileForm.value.newPasswordconfirm == '')) {
