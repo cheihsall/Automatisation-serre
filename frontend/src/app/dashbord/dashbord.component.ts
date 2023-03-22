@@ -1,15 +1,28 @@
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { donnee } from './../test2';
+
 
 @Component({
   selector: 'app-dashbord',
   templateUrl: './dashbord.component.html',
   styleUrls: ['./dashbord.component.scss']
 })
+
 export class DashbordComponent implements OnInit {
-
+ this.filter_entree=donnee;
+     console.log(this.filter_entree)
   profileForm!:FormGroup
-
+ temperature: any;
+  humidite: any;
+  lumiere: any;
+  humsol: any;
+  
+   this.filter_entree=donnee;
+     console.log(this.filter_entree)
+  filter_entree!: any;
+  
   submitted=false;
   invalid = false;
   //champs ancien mot de passe
@@ -70,4 +83,4 @@ export class DashbordComponent implements OnInit {
 
 
     }
-  
+
