@@ -2,7 +2,7 @@
 
 
   <div class=" titre text-center">
-      <h1 class="text-white">Plateforme de Gestion de Serre automatisé </h1><br>
+      <h1 class="text-white dark:text-dark-contrastText">Plateforme de Gestion de Serre automatisé </h1><br>
 
   </div>
 <div class="general">
@@ -19,7 +19,7 @@
  <div class="corps">
 
 
-  <div class="connexion">
+  <div class="connexion ">
     <div class="">
       <div class="A">
         <div class="alert alert-danger h4 text-center" role="alert" *ngIf="showcode ">
@@ -30,11 +30,11 @@
           <div class=" px-lg-5 py-lg-5">
 
             <div class="text-center  mb-4">
-              <h1>CONNEXION</h1>
+              <h1 class="text-black dark:text-dark-contrastText">CONNEXION</h1>
             </div>
 
             <form role="form" class="format"  [formGroup]="registerForm">
-              <label for="email">Email</label>
+              <label class="text-black dark:text-dark-contrastText" for="email">Email</label>
               <div class="form-group mb-3 ">
 
                 <div class="input-group">
@@ -60,7 +60,7 @@
                   <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['required']">
                     L' email est requis
                   </div>
-                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['email']">
+                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['email'] && registerForm.controls['email'].errors['pattern']">
                     L'email n'est pas valide
                   </div>
                 </div>
