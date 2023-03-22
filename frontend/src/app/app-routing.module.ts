@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Test3Component } from './test3/test3.component';
+
 import { DashbordComponent } from './dashbord/dashbord.component';
 import { SystemeComponent } from './systeme/systeme.component';
 import { FormulaireComponent } from './formulaire/formulaire.component';
@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'login', component: FormulaireComponent},
   { path: 'map' , component: MapComponent},
   { path: 'historique', component:HistoriqueComponent},
-  {path: 'test', component: Test3Component},
+  
 
 ];
 

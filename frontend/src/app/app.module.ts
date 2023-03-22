@@ -15,7 +15,7 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { IgxCalendarModule } from 'igniteui-angular'
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Test3Component } from './test3/test3.component';
+
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { Test3Component } from './test3/test3.component';
     HistoriqueComponent,
     MapComponent,
     SystemeComponent,
-    Test3Component,
+ 
 
 
   ],
