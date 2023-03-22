@@ -41,6 +41,8 @@ export class DashbordComponent implements OnInit {
     }
 
     ngOnInit(): void {
+      // TODO document why this method 'ngOnInit' is empty
+
     }
 
     passeIdentique(){
@@ -70,4 +72,3 @@ export class DashbordComponent implements OnInit {
 
 
     }
-  
