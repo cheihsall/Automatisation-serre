@@ -11,12 +11,12 @@
           </svg>
  <h2 style="color: #91D333; margin-top: 12%; text-align: center;">Nom et Prenom</h2>
  
- <button type="button" class="btn e card-title rounded-4 btn-light col-md-10" style="margin-left: 7.5%;  margin-top: 34%;" data-bs-toggle="button"><a routerLinkActive="active" [routerLink]="['systeme']" class="dropdown-item " ><img src="./assets/kkk-removebg-preview.png" style="width: 30px; height: 30px; margin-bottom: 10px; float: left;" alt="" srcset=""> <span style="font-size: 24px; ">Dashboard</span></a> </button>
+ <button type="button" class="btn e card-title rounded-4 col-md-10" style="margin-left: 7.5%;  margin-top: 34%;" data-bs-toggle="button"><a routerLinkActive="active" [routerLink]="['systeme']" class="dropdown-item " ><img src="./assets/kkk-removebg-preview.png" style="width: 30px; height: 30px; margin-top: 3px; float: left;" alt="" srcset=""> <span style="font-size: 1.5rem; ">Dashboard</span></a> </button>
 
- <button type="button" class="btn e card-title rounded-4 btn-light col-md-10" style="margin-left: 7.5%;  margin-top: 15%;" data-bs-toggle="button"><a routerLinkActive="active" [routerLink]="['historique']"class="dropdown-item " ><img src="./assets/mmma-removebg-preview.png" style="width: 30px; height: 30px; margin-bottom: 9px; float: left;" alt="" srcset=""> <span style="font-size: 24px; ">Historique</span></a> </button>
- <button type="button" class="btn e card-title rounded-4 btn-light col-md-10" style="margin-left: 7.5%; margin-top: 15%;" data-bs-toggle="modal" data-bs-target="#modalRegisterForm"> <img src="./assets/profilmodif-removebg-preview.png" style="width: 30px; height: 30px; margin-bottom: 9px; float: left;" alt="" srcset="">
-  <span style="font-size: 21px;">Modifier Profil</span></button>
- <button type="button" class="btn e card-title rounded-4 btn-light col-md-10" style="margin-left: 7.5%; margin-top: 15%;"  data-bs-toggle="button"><a routerLinkActive="active" [routerLink]="['map']" class="dropdown-item " ><img src=" ./assets/localisation-removebg-preview.png" alt="" style="width: 30px; height: 30px; margin-bottom: 9px; float: left;" srcset=""> <span style="font-size: 21px; ">Géolocalisation</span></a> </button>
+ <button type="button" class="btn e card-title rounded-4  col-md-10" style="margin-left: 7.5%;  margin-top: 15%;" data-bs-toggle="button"><a routerLinkActive="active" [routerLink]="['historique']"class="dropdown-item " ><img src="./assets/mmma-removebg-preview.png" style="width: 30px; height: 30px; margin-top: 3px; float: left;" alt="" srcset=""> <span style="font-size: 24px; ">Historique</span></a> </button>
+ <button type="button" class="btn e card-title rounded-4 col-md-10" style="margin-left: 7.5%; margin-top: 15%;" data-bs-toggle="modal" data-bs-target="#modalRegisterForm"> <img src="./assets/profilmodif-removebg-preview.png" style="width: 30px; height: 30px; margin-bottom: 9px; float: left;" alt="" srcset="">
+  <span style="font-size: 24px;">Modifier Profil</span></button>
+ <button type="button" class="btn e card-title rounded-4  col-md-10" style="margin-left: 7.5%; margin-top: 15%;"  data-bs-toggle="button"><a routerLinkActive="active" [routerLink]="['map']" class="dropdown-item " ><img src=" ./assets/localisation-removebg-preview.png" alt="" style="width: 30px; height: 30px;margin-top: 3px;float: left;" srcset=""> <span style="font-size: 24px; ">Géolocalisation</span></a> </button>
   </aside>
   <main class=" d-flex flex-column " style="height: 100vh; width: 85%; ">
       <header style="height: 10%;width:100%; background-color: #3a3a3a; " class="  ">
@@ -31,9 +31,9 @@
       </div>
   </h2>
       </header>
-      <section class=" p "  style="  width: 100%;height: 30%;">
+      <section class=" p "  style="display: flex; flex-direction: column;  width: 100%;height: 30%;">
       
-          <div class="  d-flex justify-content-center  gap-4  mb-3 "  style=" height: 15rem; margin-top: 2rem; margin-right: 12%;" *ngFor="let periode of filter_entree">
+          <div class="  d-flex justify-content-center  gap-4  mb-3 "  style=" height: 15rem; margin-top: 2rem; margin-right: 12%; margin-left: 9%;" *ngFor="let periode of filter_entree">
               <div class="card rounded-4" style="width: 16rem;  height: 13rem;  background-color: #91D333;">
                   <div class=" d-flex flex-column gap-4 "  >
                   <div  class="card-title  colorr p-2 rounded-4 d-flex justify-content-center" style="background-color: #3a3a3a;">
@@ -74,7 +74,7 @@
                   <div class="card-title  colorr p-2 rounded-4 d-flex justify-content-center" style="background-color: #3a3a3a;">
                     <img src="./assets/svgviewer-png-output (4).png" style="width: 3rem; height: 3rem;" alt="" srcset="">
    
-                          <span style="color: #91D333; font-size: 2rem;">LUMINOSITÉ</span>
+                          <span style="color: #91D333; font-size: 1.8rem;">LUMINOSITÉ</span>
    
                   </div>
                   <div class="d-flex justify-content-center gap-2" style="margin-top: 5px;">
@@ -82,7 +82,7 @@
                 </div>
                   </div>
                 </div>
-                <div class="" style="width: 16rem; ">
+                <div class=" d-flex">
    
    
              <img src="./assets/svgviewer-png-output.png" alt="" style="width: 25rem; height: 13rem; margin-left: 60px;  border-radius: 1rem;"  srcset="">
