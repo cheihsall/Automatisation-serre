@@ -119,7 +119,7 @@ aria-hidden="true">
     <div class="modal-body mx-3">
       <div class="md-form mb-5">
         <label for="actuelPass">Actuel mot de pass</label>
-                    <div style="position: relative;" [ngClass]="{'invalid':profileForm.controls['actuelPass'].dirty  && profileForm.controls['actuelPass'].errors}" >
+                    <div style="position: relative;" [ngClass]="{'invalid':submitted && profileForm.controls['actuelPass'].errors}" >
                       <div class="input-group-prepend">
                       </div>
                       <input style="margin-left:0px"  formControlName="actuelPass"
@@ -127,8 +127,8 @@ aria-hidden="true">
 
 
                     </div>
-                    <div style="margin-top: -10px;" *ngIf="profileForm.controls['actuelPass'].dirty  && profileForm.controls['actuelPass'].errors" class="text-danger">
-                      <div *ngIf="profileForm.controls['actuelPass'].dirty && profileForm.controls['actuelPass'].errors['required']" class="pt-2">
+                    <div style="margin-top: -10px;" *ngIf="submitted && profileForm.controls['actuelPass'].errors" class="text-danger">
+                      <div *ngIf="submitted && profileForm.controls['actuelPass'].errors['required']" class="pt-2">
                         Le mot de passe est obligatoire!
                       </div>
                       </div>
@@ -136,7 +136,7 @@ aria-hidden="true">
       </div>
       <div class="md-form mb-5">
         <label for="newPass">Nouveau mot de passe</label>
-        <div [ngClass]="{'invalid':profileForm.controls['actuelPass'].dirty && profileForm.controls['newPass'].errors}" class="input-group input-group-alternative mb-3">
+        <div [ngClass]="{'invalid':submitted && profileForm.controls['newPass'].errors}" class="input-group input-group-alternative mb-3">
           <div class="input-group-prepend">
             <i class="fa fa-home"></i>
           </div>
@@ -146,7 +146,7 @@ aria-hidden="true">
 
         </div>
         <div style="margin-top: -10px;" *ngIf="profileForm.controls['actuelPass'].dirty && profileForm.controls['newPass'].errors" class="text-danger">
-          <div *ngIf="profileForm.controls['actuelPass'].dirty && profileForm.controls['newPass'].errors['required']">
+          <div *ngIf="submitted && profileForm.controls['newPass'].errors['required']">
             Le mot de passe est obligatoire!
           </div>
       </div>
@@ -155,7 +155,7 @@ aria-hidden="true">
 
       <div class="md-form mb-4">
         <label for="newPasswordconfirm">Confirmation de mot de passe</label>
-        <div [ngClass]="{'invalid':profileForm.controls['actuelPass'].dirty&& invalid }" style="position: relative;">
+        <div [ngClass]="{'invalid':submitted && invalid }" style="position: relative;">
 
 
 
@@ -164,14 +164,14 @@ aria-hidden="true">
 
 
         </div>
-        <div style="margin-top: -10px;" *ngIf="profileForm.controls['actuelPass'].dirty && profileForm.controls['newPasswordconfirm'].errors" class="text-danger">
+        <div style="margin-top: -10px;" *ngIf="submitted && profileForm.controls['newPasswordconfirm'].errors" class="text-danger">
 
 
 
 
         </div>
 
-           <p  *ngIf="profileForm.controls['actuelPass'].dirty && invalid" class="text-danger pt-2">les mot de passe ne correspond pas</p >
+           <p  *ngIf="submitted && invalid" class="text-danger pt-2">les mot de passe ne correspond pas</p >
 
       </div>
 
