@@ -17,6 +17,9 @@ export class SystemeComponent implements OnInit {
   clicke =false;
   clickedA=false;
   clickeE=false;
+  cArrose=false;
+  cArreter=false;
+
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
   imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
 
