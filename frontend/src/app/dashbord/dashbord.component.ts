@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { donnee } from './../test2';
 
 
@@ -17,7 +18,6 @@ export class DashbordComponent  {
   humidite: any;
   lumiere: any;
   humsol: any;
-
 
 
   submitted=false;
@@ -39,14 +39,13 @@ export class DashbordComponent  {
     pass: string = '';
   filter_entree:any;
     constructor(
-
        public formBuilder: FormBuilder ) {
-
       this.profileForm = this.formBuilder.group({
 
         actuelPass:['',[Validators.required ]],
         newPass:['',[Validators.required]],
        newPasswordconfirm:['', [Validators.required]],
+
     }
     )
     }
