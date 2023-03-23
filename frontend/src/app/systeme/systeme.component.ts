@@ -15,6 +15,8 @@ export class SystemeComponent implements OnInit {
   imgpompegif ='assets/pompe.gif';
   clicked = false;
   clicke =false;
+  clickedA=false;
+  clickeE=false;
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
   imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
 

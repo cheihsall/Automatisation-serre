@@ -109,9 +109,9 @@
                 <img src="{{imageSrc }}" class="card-img-top" style="height: 190px;" alt="image">
                 <div class="card-body d-flex  justify-content-center gap-5">
                  
-                   <button *ngFor="let imageButton of imageButtonOn; "  (click)="onClick(imageButton);"  class="btn btn-success  rounded"> Allumer  
+                   <button  type="button"  [disabled]="clickedA" *ngFor="let imageButton of imageButtonOn; "  (click)="onClick(imageButton);clickedA=true;" (click)="onClick(imageButton);clickeE=false;" class="btn btn-success  rounded"> Allumer  
                      </button>
-                     <button *ngFor="let imageButton of imageButtons;" (click)="onClick(imageButton);" class="btn btn-danger rounded "> Eteindre  
+                     <button  type="button"  [disabled]="clickeE"*ngFor="let imageButton of imageButtons;" (click)="onClick(imageButton);clickeE=true;" (click)="onClick(imageButton);clickedA=false;" class="btn btn-danger rounded "> Eteindre  
                     </button>
                  
                 </div>
