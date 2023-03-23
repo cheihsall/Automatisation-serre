@@ -29,13 +29,13 @@
               </tr>
           </thead>
           <tbody>
+
             <tr *ngFor="let periode of filter_entree | paginate: {itemsPerPage:6, currentPage:page, totalItems:totalLenght };">
               <td align="center">{{periode.Date}}</td >
               <td align="center">{{periode.Temperature}}</td >
               <td align="center">{{periode.Humidite}} </td >
               <td align="center" >{{periode.lumiere}} </td >
               <td  align="center">{{periode.hum_sol}}</td >
-
             </tr>
           </tbody>
           </table>
