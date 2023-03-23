@@ -80,6 +80,8 @@ export class DashbordComponent  {
 
     }
 
-
+    reset() {//pour annuler les modifications
+      this.ngOnInit();
+    }
 
     }
