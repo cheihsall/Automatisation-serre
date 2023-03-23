@@ -96,6 +96,38 @@ export const donnee = [
   "lumiere" : "309",
   "Date": "2023-03-16",
   "Heure": "19:00:00"
+},
+{
+  "_id": {
+    "$oid": "63dbeea621c509b8d0815a7f"
+  },
+  "Temperature": "21.00",
+  "Humidite": "78.00",
+  "hum_sol" : "67",
+  "lumiere" : "120",
+  "Date": "2023-03-05",
+  "Heure": "08:00:00"
+},
+{
+  "_id": {
+    "$oid": "63dbeea621c509b8d0815a7f"
+  },
+  "Temperature": "23.00",
+  "Humidite": "90.00",
+  "hum_sol" : "75",
+  "lumiere" : "220",
+  "Date": "2023-03-05",
+  "Heure": "12:00:00"
+},
+{
+  "_id": {
+    "$oid": "63dbeea621c509b8d0815a7f"
+  },
+  "Temperature": "29.00",
+  "Humidite": "97.00",
+  "hum_sol" : "90",
+  "lumiere" : "309",
+  "Date": "2023-03-05",
+  "Heure": "19:00:00"
 }
-
 ]

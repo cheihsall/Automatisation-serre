@@ -1,55 +1,57 @@
- <div>
- <div class="blc3" style="border-radius: 5px;color: #000000;width: 98%; margin-left: 1.1%;padding-top: 1%; justify-content: center;">
+<div>
+  <div class="blc3"
+    style="border-radius: 5px;color: #000000;width: 98%; margin-left: 1.1%;padding-top: 1%; justify-content: center;">
 
-        <nav class="navbar navbar-light" >
-          <div class="container" style="height: 54px;display: flex;">
+    <nav class="navbar navbar-light">
+      <div class="container" style="height: 54px;display: flex;">
 
-                   <h1 class="text-center " style="margin-left: 550px;"> Historiques</h1>
-            <form style="margin-left:350px;">
+        <h1 class="text-center " style="margin-left: 550px;"> Historiques</h1>
+        <form style="margin-left:350px;">
 
-              <input  (change)="calend($event)" class="form-control me-2"  type="date" id="cal" name="calendrier">
-              <!--  -->
-            </form>
-          </div>
-        </nav>
+          <input (change)="calend($event)" class="form-control me-2" type="date" id="cal" name="calendrier">
+          <!--  -->
+        </form>
+      </div>
+    </nav>
 
-        <table class="table table-bordered border-black">
-          <div class="form-group col-md-3">
+    <table class="table table-bordered border-black">
+      <div class="form-group col-md-3">
 
-          </div>
-          <thead>
+      </div>
+      <thead>
+<tr>
 
-              <tr align="center" style="background-color: #91D333; color: white; ">
+</tr>
+        <tr align="center" style="background-color: #91D333; color: white; ">
 
-                <th>Date</th>
-                <th>Température en °C</th>
-                <th>Humidite en %</th>
-                <th>Luminosité du toit</th>
-                <th>Humidité du sol en %</th>
-              </tr>
-          </thead>
-          <tbody>
+          <th >Date</th>
+          <th>Heure </th>
+          <th>Température en °C</th>
+          <th>Humidite en %</th>
+          <th>Luminosité en lux</th>
+          <th>Humidité du sol en %</th>
+        </tr>
+      </thead>
+      <tbody>
 
-            <tr *ngFor="let periode of filter_entree | paginate: {itemsPerPage:6, currentPage:page, totalItems:totalLenght };">
-              <td align="center">{{periode.Date}}</td >
-              <td align="center">{{periode.Temperature}}</td >
-              <td align="center">{{periode.Humidite}} </td >
-              <td align="center" >{{periode.lumiere}} </td >
-              <td  align="center">{{periode.hum_sol}}</td >
-            </tr>
-          </tbody>
-          </table>
-  <!-- pagination -->
-  <div class="pagination fixed-buttom justify-content-center">
-    <pagination-controls (pageChange)="page=$event" ></pagination-controls>
+        <tr
+          *ngFor="let periode of filter_entree | paginate: {itemsPerPage:6, currentPage:page, totalItems:totalLenght };">
+
+          <td  align="center">{{periode.Date}}</td>
+          <td align="center">{{periode.Heure}}</td>
+          <td align="center">{{periode.Temperature}}</td>
+          <td align="center">{{periode.Humidite}} </td>
+          <td align="center">{{periode.lumiere}} </td>
+          <td align="center">{{periode.hum_sol}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- pagination -->
+    <div class="pagination fixed-bottom justify-content-center">
+      <pagination-controls (pageChange)="page=$event"></pagination-controls>
     </div>
-
-
-
-
-
-          </div>
-    </div>
+  </div>
+</div>
 
 
 
