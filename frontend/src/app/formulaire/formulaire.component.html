@@ -41,7 +41,7 @@
 
 
                   <div class="input-group-prepend "
-                    [ngClass]="{'invalid':registerForm.controls['email'].dirty && registerForm.controls['email'].errors}" type="email">
+                    [ngClass]="{'invalid': registerForm.controls['email'].dirty && registerForm.controls['email'].touched && registerForm.controls['email'].errors}" type="email">
 
                     <span class="input-group-text bd"><svg width="14" height="25" viewBox="0 0 13 14"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,10 +54,10 @@
 
 
                   <input class="form-control db" formControlName="email"
-                    [ngClass]="{'is-invalid':registerForm.controls['email'].dirty && registerForm.controls['email'].errors}" type="email">
+                    [ngClass]="{'is-invalid': registerForm.controls['email'].invalid && registerForm.controls['email'].touched && registerForm.controls['email'].errors}" type="email">
                 </div>
-                <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors" class="text-danger">
-                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['required']">
+                <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].touched && registerForm.controls['email'].errors" class="text-danger">
+                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].touched && registerForm.controls['email'].errors['required']">
                     L' email est requis
                   </div>
                   <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['email'] && registerForm.controls['email'].errors['pattern']">
