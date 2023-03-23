@@ -13,6 +13,13 @@ export class SystemeComponent implements OnInit {
   imgOignon ='assets/oignon.webp';
   imgpompe ='assets/pompe.jpeg';
   imgpompegif ='assets/pompe.gif';
+  clicked = false;
+  clicke =false;
+  clickedA=false;
+  clickeE=false;
+  cArrose=false;
+  cArreter=false;
+
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
   imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
 
