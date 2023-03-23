@@ -19,7 +19,13 @@
                         <div *ngIf="imgpompe"> <div class="card-body d-flex  justify-content-center gap-5"><button *ngFor="let pompe of imageArroser ; " (click)="arrose(pompe);" class="btn btn-success  rounded"> Arroser
                         </button> 
                         <button  *ngFor="let pompe of imageArreter ; "  (click)="arrose(pompe);"  class="btn btn-danger rounded ">Arreter 
-                       </button></div> </div>
+                       </button></div>
+                       <div class="content">
+
+                        <div class="text mt-5"><h4>Arrosage par défaut</h4>
+                       
+                        </div>
+                      </div> </div>
 
                       </div>
                      <!--  <div class="carousel-item">
@@ -38,7 +44,9 @@
                         </button> 
                         <button  *ngFor="let pomper of imagetomate ; "  (click)="arroseT(pomper);"  class="btn btn-danger rounded ">Arreter 
                        </button></div>
+                       
                        <div class="content">
+
                         <div class="text"><h5>Nom:Tomate</h5>
                           <h5>Caractéristiques:Riche en eau;<br>
                             Source de vitamine C ;</h5>
@@ -87,10 +95,9 @@
                 <img src="{{imgFermer}}" class="card-img-top" style="height: 190px;" alt="image">
                 <div class="card-body d-flex  justify-content-center gap-5">
                   
-                     
-                  <button *ngFor="let imageButtonf of imageOuvert ; "  (click)="cliquer(imageButtonf);" class="btn btn-success rounded"> Ouvert  
+                   <button type="button"  [disabled]="clicked" *ngFor="let imageButtonf of imageOuvert ; "  (click)="cliquer(imageButtonf); clicked = true;"  (click)="cliquer(imageButtonf);clicke = false;"  class="btn btn-success  rounded"   > Ouvert  
                   </button>
-                  <button *ngFor="let imageButtonf of imageFermer ;" (click)="cliquer(imageButtonf);" class="btn btn-danger rounded"> Fermer 
+                 <button  type="button" [disabled]="clicke" *ngFor="let imageButtonf of imageFermer ;" (click)="cliquer(imageButtonf);clicke = true;" (click)="cliquer(imageButtonf); clicked = false;" class="btn btn-danger rounded" > Fermer 
                  </button>
                 </div>
               </div>
