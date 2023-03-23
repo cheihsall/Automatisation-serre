@@ -10,7 +10,7 @@ export class SystemeComponent implements OnInit {
   imgFermer='assets/fermerr.jpg'
   imageSrc = 'assets/extract.png';
   imgtomate ='assets/tomate.jpg';
-  imgOignon ='assets/oignon.png';
+  imgOignon ='assets/oignon.webp';
   imgpompe ='assets/pompe.jpeg';
   imgpompegif ='assets/pompe.gif';
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
@@ -24,6 +24,9 @@ export class SystemeComponent implements OnInit {
 
   imageArroT = [ {src:'assets/pompe.gif', srcs:'', srcr :''}];
   imagetomate = [ {src:'assets/tomate.jpg',  srcr:'', srcs : ''}];
+
+  imageArrosO = [ {src:'assets/pompe.gif', srcs:'', srcr :''}];
+  imageArreterO = [ {src:'assets/oignon.webp',  srcr:'', srcs : ''}];
 
 
 
@@ -41,9 +44,7 @@ export class SystemeComponent implements OnInit {
   cliquer(imageNameObject: { srcr: string; srcs: string; src: string;}) {
    
     this.imgFermer = imageNameObject.src;
-   /*  this.onSrc = imageNameObject.srcs ;
-    this.offSrc = imageNameObject.srcr ;
-     */
+  
   }
   arrose(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this.imgpompe = imageNameObject.src;
@@ -51,6 +52,10 @@ export class SystemeComponent implements OnInit {
   }
   arroseT(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this. imgtomate= imageNameObject.src;
+
+  }
+  arroseO(imageNameObject: { srcr: string; srcs: string; src: string;}) {
+    this.imgOignon= imageNameObject.src;
 
   }
 }

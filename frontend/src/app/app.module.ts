@@ -9,12 +9,10 @@ import { HistoriqueComponent } from './historique/historique.component';
 import { MapComponent } from './map/map.component';
 import { SystemeComponent } from './systeme/systeme.component';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import {NgxPaginationModule} from 'ngx-pagination';
-import { IgxCalendarModule } from 'igniteui-angular'
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -25,6 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HistoriqueComponent,
     MapComponent,
     SystemeComponent,
+ 
 
 
   ],

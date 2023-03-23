@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'login', component: FormulaireComponent},
   { path: 'map' , component: MapComponent},
   { path: 'historique', component:HistoriqueComponent},
-
+  
 
 ];
 
