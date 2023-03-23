@@ -14,11 +14,11 @@ export class SystemeComponent implements OnInit {
   imgpompe ='assets/pompe.jpeg';
   imgpompegif ='assets/pompe.gif';
   clicked = false;
-  clicke =false;
+  clicke =true;
   clickedA=false;
-  clickeE=false;
+  clickeE=true;
   cArrose=false;
-  cArreter=false;
+  cArreter=true;
 
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
   imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
