@@ -73,14 +73,9 @@ export class DashbordComponent  {
       if(this.profileForm.invalid){
         return;
       }
-
-
-
-
-
     }
 
-    reset() {//pour annuler les modifications
+    reset() {
       this.ngOnInit();
     }
 

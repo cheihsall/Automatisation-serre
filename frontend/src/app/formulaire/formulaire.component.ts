@@ -9,9 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class FormulaireComponent implements OnInit, OnDestroy {
 message: any;
-loginUser() {
-throw new Error('Method not implemented.');
-}
+
 
   registerForm: FormGroup;
   errMsg: any;
@@ -32,6 +30,16 @@ throw new Error('Method not implemented.');
   ngOnDestroy(): void {
     throw new Error('Method not implemented.');
   }
+
+  loginUser(){
+
+    this.submitted = true;
+
+    if(this.registerForm.invalid){
+      return;
+    }
+  }
+
 
   ngOnInit() {
 
