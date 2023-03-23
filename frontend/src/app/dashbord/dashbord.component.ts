@@ -30,7 +30,7 @@ export class DashbordComponent  {
   inputType_nouveau:any = "password";
   inputType_nouveau_txt = 0;
   inputType_nouveau_pwd = 1;
-  //champs confirmation nouveau mot de passe
+  //champs confirmation nouveau mot de pass
   inputType_confirm:any = "password";
   inputType_confirm_txt = 0;
   inputType_confirm_pwd = 1;
