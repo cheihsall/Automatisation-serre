@@ -21,6 +21,7 @@ throw new Error('Method not implemented.');
 
   inputType : any = "password";
 
+
   constructor(
     public formBuilder: FormBuilder  ) {
     this.registerForm = this.formBuilder.group({
@@ -37,6 +38,6 @@ throw new Error('Method not implemented.');
 
       }
 
-  //  })
   }
+
 
