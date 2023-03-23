@@ -73,13 +73,10 @@ export class DashbordComponent  {
       if(this.profileForm.invalid){
         return;
       }
-
-
-
-
-
     }
 
-
+    reset() {
+      this.ngOnInit();
+    }
 
     }

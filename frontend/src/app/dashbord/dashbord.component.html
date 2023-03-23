@@ -112,14 +112,14 @@ aria-hidden="true">
   <div class="modal-content ok">
     <div class="modal-header text-center bordure">
       <h4 class="modal-title w-100 font-weight-bold">Modification de mot de passe</h4>
-      <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+      <button type="reset" class="close" data-bs-dismiss="modal" aria-label="Close" (click)="reset()">
         <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="modal-body mx-3">
       <div class="md-form mb-5">
         <label for="actuelPass">Actuel mot de pass</label>
-                    <div style="position: relative;" [ngClass]="{'invalid':submitted && profileForm.controls['actuelPass'].errors}" >
+                    <div style="position: relative;" [ngClass]="{'invalid':(submitted || profileForm.controls['actuelPass'].dirty )&& profileForm.controls['actuelPass'].errors}" >
                       <div class="input-group-prepend">
                       </div>
                       <input style="margin-left:0px"  formControlName="actuelPass"
@@ -127,8 +127,8 @@ aria-hidden="true">
 
 
                     </div>
-                    <div style="margin-top: -10px;" *ngIf="submitted && profileForm.controls['actuelPass'].errors" class="text-danger">
-                      <div *ngIf="submitted && profileForm.controls['actuelPass'].errors['required']" class="pt-2">
+                    <div style="margin-top: -10px;" *ngIf="(submitted || profileForm.controls['actuelPass'].dirty ) && profileForm.controls['actuelPass'].errors" class="text-danger">
+                      <div *ngIf="(submitted || profileForm.controls['actuelPass'].dirty ) && profileForm.controls['actuelPass'].errors['required']" class="pt-2">
                         Le mot de passe est obligatoire!
                       </div>
                       </div>
@@ -136,7 +136,7 @@ aria-hidden="true">
       </div>
       <div class="md-form mb-5">
         <label for="newPass">Nouveau mot de passe</label>
-        <div [ngClass]="{'invalid':submitted && profileForm.controls['newPass'].errors}" class="input-group input-group-alternative mb-3">
+        <div [ngClass]="{'invalid':(submitted || profileForm.controls['newPass'].dirty) && profileForm.controls['newPass'].errors}" class="input-group input-group-alternative mb-3">
           <div class="input-group-prepend">
             <i class="fa fa-home"></i>
           </div>
@@ -145,8 +145,8 @@ aria-hidden="true">
 
 
         </div>
-        <div style="margin-top: -10px;" *ngIf="profileForm.controls['actuelPass'].dirty && profileForm.controls['newPass'].errors" class="text-danger">
-          <div *ngIf="submitted && profileForm.controls['newPass'].errors['required']">
+        <div style="margin-top: -10px;" *ngIf="(submitted || profileForm.controls['newPass'].dirty) && profileForm.controls['newPass'].errors" class="text-danger">
+          <div *ngIf="(submitted || profileForm.controls['newPass'].dirty)&& profileForm.controls['newPass'].errors['required']">
             Le mot de passe est obligatoire!
           </div>
       </div>
@@ -155,7 +155,7 @@ aria-hidden="true">
 
       <div class="md-form mb-4">
         <label for="newPasswordconfirm">Confirmation de mot de passe</label>
-        <div [ngClass]="{'invalid':submitted && invalid }" style="position: relative;">
+        <div [ngClass]="{'invalid':(submitted || profileForm.controls['newPasswordconfirm'].dirty) && invalid }" style="position: relative;">
 
 
 
@@ -164,20 +164,20 @@ aria-hidden="true">
 
 
         </div>
-        <div style="margin-top: -10px;" *ngIf="submitted && profileForm.controls['newPasswordconfirm'].errors" class="text-danger">
+        <div style="margin-top: -10px;" *ngIf="(submitted || profileForm.controls['newPasswordconfirm'].dirty)&& profileForm.controls['newPasswordconfirm'].errors" class="text-danger">
 
 
 
 
         </div>
 
-           <p  *ngIf="submitted && invalid" class="text-danger pt-2">les mot de passe ne correspond pas</p >
+           <p  *ngIf="(submitted || profileForm.controls['newPasswordconfirm'].dirty) && invalid" class="text-danger pt-2">les mot de passe ne correspond pas</p >
 
       </div>
 
     </div>
     <div class="modal-footer d-flex justify-content-center bordure">
-      <button type="reset" data-bs-dismiss="modal" aria-label="Close" class="btn bouttonr my-4 font-weight-bold">Annuler</button>
+      <button type="reset" data-bs-dismiss="modal" aria-label="Close" class="btn bouttonr my-4 font-weight-bold"  (click)="reset()">Annuler</button>
 
       <button type="submit" class="btn boutton my-4 font-weight-bold">Modifier</button>
     </div>
