@@ -6,20 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./systeme.component.scss']
 })
 export class SystemeComponent implements OnInit {
-  imgOuvert='assets/ouvert.png'
-  imgFermer='assets/fermerr.jpg'
-  imageSrc = 'assets/extract.png';
-  imgtomate ='assets/tomate.jpg';
-  imgOignon ='assets/oignon.webp';
-  imgpompe ='assets/pompe.jpeg';
-  imgpompegif ='assets/pompe.gif';
-  clicked = false;
-  clicke =false;
-  clickedA=false;
-  clickeE=false;
-  cArrose=false;
-  cArreter=false;
+  /* déclaration des images utilisés dans le Systémes */
+  imgOuvert='assets/ouvert.png'; // porte ouvert
+  imgFermer='assets/fermerr.jpg'; //porte Fermer
+  imageSrc = 'assets/extract.png'; //image de l'extracteur d'air
+  imgtomate ='assets/tomate.jpg'; //image de la plante Tomate
+  imgOignon ='assets/oignon.webp'; //image de la plante Oignon
+  imgpompe ='assets/pompe.jpeg'; //image de la pompe qui gére l'arrosage par défaut
+  imgpompegif ='assets/pompe.gif'; //image gif de la pompe
 
+  /* déclaration des Etats activé et désactivé des boutons */
+  clicked = false; //active/désactive bouton ouverture fenetre
+  clicke =true; //active/désactive bouton fermeture fenetre
+
+  clickedA=false; //active/désactive bouton ouverture Extracteur
+  clickeE=true;  //active/désactive bouton fermeture Extracteur
+
+  cArrose=false;//active/désactive bouton Arrosage
+  cArreter=true;//active/désactive bouton Arreter
+
+/* recupération des images du systéme sous forme de tableau */
   imageButtons = [ {src:'assets/extract.png', srcs:'', srcr :''}];
   imageButtonOn = [ {src:'assets/extracteur.gif',  srcr:'', srcs : ''}];
 
@@ -41,26 +47,29 @@ export class SystemeComponent implements OnInit {
   ngOnInit(): void {
       
   }
+  /*Fonction pour Extracteur d'aire  */
   onClick(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this.imageSrc = imageNameObject.src;
     
-   /*  this.onSrc = imageNameObject.srcs ;
-    this.offSrc = imageNameObject.srcr ;
-     */
+   
   }
+  /*Fonction  pour Toit  */
   cliquer(imageNameObject: { srcr: string; srcs: string; src: string;}) {
    
     this.imgFermer = imageNameObject.src;
   
   }
+  /* Fonction pour arrosage par défaut */
   arrose(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this.imgpompe = imageNameObject.src;
 
   }
+  /* Fonction pour arrosage Tomate */
   arroseT(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this. imgtomate= imageNameObject.src;
 
   }
+  /* Fonction pour arrosage Tomate */
   arroseO(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this.imgOignon= imageNameObject.src;
 
