@@ -37,21 +37,21 @@ export class SystemeComponent implements OnInit {
 
 
 
-  
+
   ngOnInit(): void {
-      
+
   }
   onClick(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this.imageSrc = imageNameObject.src;
-    
+
    /*  this.onSrc = imageNameObject.srcs ;
     this.offSrc = imageNameObject.srcr ;
      */
   }
   cliquer(imageNameObject: { srcr: string; srcs: string; src: string;}) {
-   
+
     this.imgFermer = imageNameObject.src;
-  
+
   }
   arrose(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this.imgpompe = imageNameObject.src;
