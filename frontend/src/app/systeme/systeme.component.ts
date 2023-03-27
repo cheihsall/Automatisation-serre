@@ -43,21 +43,20 @@ export class SystemeComponent implements OnInit {
 
 
 
-  
+
   ngOnInit(): void {
-      
+
   }
   /*Fonction pour Extracteur d'aire  */
   onClick(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this.imageSrc = imageNameObject.src;
-    
-   
+
   }
   /*Fonction  pour Toit  */
   cliquer(imageNameObject: { srcr: string; srcs: string; src: string;}) {
-   
+
     this.imgFermer = imageNameObject.src;
-  
+
   }
   /* Fonction pour arrosage par défaut */
   arrose(imageNameObject: { srcr: string; srcs: string; src: string;}) {

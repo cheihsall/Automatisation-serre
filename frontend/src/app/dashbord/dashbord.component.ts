@@ -77,6 +77,7 @@ export class DashbordComponent  {
 
     reset() {
       this.ngOnInit();
+      location.reload();
     }
 
     }
