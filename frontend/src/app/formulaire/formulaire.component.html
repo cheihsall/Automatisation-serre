@@ -33,7 +33,7 @@
               <h1 class="text-black dark:text-dark-contrastText">CONNEXION</h1>
             </div>
 
-            <form role="form" class="format"  [formGroup]="registerForm">
+            <form role="form" class="format"  [formGroup]="registerForm" (ngSubmit)="loginUser()">
               <label class="text-black dark:text-dark-contrastText" for="email">Email</label>
               <div class="form-group mb-3 ">
 
@@ -41,7 +41,7 @@
 
 
                   <div class="input-group-prepend "
-                    [ngClass]="{'invalid':registerForm.controls['email'].dirty && registerForm.controls['email'].errors}" type="email">
+                    [ngClass]="{'invalid':  (submitted || registerForm.controls['email'].dirty) && registerForm.controls['email'].errors}" type="email">
 
                     <span class="input-group-text bd"><svg width="14" height="25" viewBox="0 0 13 14"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,10 +54,10 @@
 
 
                   <input class="form-control db" formControlName="email"
-                    [ngClass]="{'is-invalid':registerForm.controls['email'].dirty && registerForm.controls['email'].errors}" type="email">
+                    [ngClass]="{'is-invalid': (submitted || registerForm.controls['email'].dirty) && registerForm.controls['email'].errors}" type="email">
                 </div>
-                <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors" class="text-danger">
-                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['required']">
+                <div *ngIf="(submitted || registerForm.controls['email'].dirty)  && registerForm.controls['email'].errors" class="text-danger">
+                  <div *ngIf="(submitted || registerForm.controls['email'].dirty)  && registerForm.controls['email'].errors['required']">
                     L' email est requis
                   </div>
                   <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['email'] && registerForm.controls['email'].errors['pattern']">
@@ -69,7 +69,7 @@
               <div class="form-group">
                 <div class="input-group input-group-alternative">
                   <div class="input-group-prepend  " style=" border-left-width: none;"
-                    [ngClass]="{'invalid': registerForm.controls['email'].dirty && registerForm.controls['password'].errors}" type="email">
+                    [ngClass]="{'invalid':(submitted || registerForm.controls['password'].dirty )&& registerForm.controls['password'].errors}" type="email">
                     <span class=" bd "><svg width="13" height="25" viewBox="0 0 13 14" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -79,14 +79,14 @@
                     </span>
                   </div>
                   <input class="form-control db" formControlName="password"
-                    [ngClass]="{'is-invalid':registerForm.controls['email'].dirty &&registerForm.controls['password'].errors}" type="password">
+                    [ngClass]="{'is-invalid':(submitted || registerForm.controls['password'].dirty ) &&registerForm.controls['password'].errors}" type="password">
 
                 </div>
-                <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['password'].errors" class="text-danger">
-                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['password'].errors['required']">
+                <div *ngIf="(submitted || registerForm.controls['password'].dirty ) && registerForm.controls['password'].errors" class="text-danger">
+                  <div *ngIf="(submitted || registerForm.controls['password'].dirty ) && registerForm.controls['password'].errors['required']">
                     Le mot de passe est requis
                   </div>
-                  <div *ngIf="registerForm.controls['email'].dirty &&registerForm.controls['password'].errors['minlength']">
+                  <div *ngIf="(submitted || registerForm.controls['password'].dirty ) &&registerForm.controls['password'].errors['minlength']">
                     Le mot de passe doit contenir 5 caractères
                   </div>
                 </div>
