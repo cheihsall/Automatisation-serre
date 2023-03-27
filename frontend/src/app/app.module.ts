@@ -10,10 +10,15 @@ import { MapComponent } from './map/map.component';
 import { SystemeComponent } from './systeme/systeme.component';
 
 import {NgxPaginationModule} from 'ngx-pagination';
-
+import {SocketIoModule, SocketIoConfig} from 'ngx-socket-io'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-
+const config: SocketIoConfig= {
+  url: 'http://localhost:3000',
+  options: {
+    transports: ['websocket']
+  }
+}
 
 @NgModule({
   declarations: [
@@ -23,12 +28,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HistoriqueComponent,
     MapComponent,
     SystemeComponent,
- 
+
 
 
   ],
   imports: [
     BrowserModule,
+    SocketIoModule.forRoot(config),
     AppRoutingModule,
    ReactiveFormsModule,
     FormsModule,

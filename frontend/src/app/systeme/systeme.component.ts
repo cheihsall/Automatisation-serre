@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RealtimeService } from '../realtime.service';
 
 @Component({
   selector: 'app-systeme',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./systeme.component.scss']
 })
 export class SystemeComponent implements OnInit {
+  constructor(private socketService:RealtimeService){
+
+  }
   /* déclaration des images utilisés dans le Systémes */
   imgOuvert='assets/ouvert.png'; // porte ouvert
   imgFermer='assets/fermerr.jpg'; //porte Fermer
@@ -61,7 +65,7 @@ export class SystemeComponent implements OnInit {
   /* Fonction pour arrosage par défaut */
   arrose(imageNameObject: { srcr: string; srcs: string; src: string;}) {
     this.imgpompe = imageNameObject.src;
-
+    this.socketService.allumer()
   }
   /* Fonction pour arrosage Tomate */
   arroseT(imageNameObject: { srcr: string; srcs: string; src: string;}) {
