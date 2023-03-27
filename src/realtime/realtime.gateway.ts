@@ -13,7 +13,7 @@ import { Server } from 'ws';
 export class RealtimeGateway
   implements OnGatewayConnection, OnGatewayDisconnect
 {
-  data = 'hello khadija yvewoul';
+  data = 'hello khadija yvewl';
   @WebSocketServer()
   server: Server;
 
